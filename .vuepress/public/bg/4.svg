@@ -1,0 +1,17 @@
+<!-- 量子隧道 -->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="filter">
+        <feTurbulence type="fractalNoise" baseFrequency=".05"/>
+        <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0 0 1 1"/>
+        </feComponentTransfer>
+        <feComposite in="SourceGraphic" operator="in"/>
+        <feMorphology radius="1" operator="dilate"/>
+        <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <circle r="150%"/>
+    <g fill="none" stroke="#bef" stroke-width="99%" filter="url(#filter)">
+        <circle cx="50%" cy="50%" r="57%" stroke-dasharray="2 60 .5 60"/>
+        <circle cx="50%" cy="50%" r="71%" stroke-dasharray=".5 43 2 47"/>
+    </g>
+</svg>
